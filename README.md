@@ -1,55 +1,83 @@
+# Flam Research – Parametric Curve Fitting Assignment
 
-# Parametric Curve Fitting – Flam Research Assignment
+## 🔍 Objective
 
-## Final Estimated Parameters
-- **θ (theta)** = 0.516313 rad (≈ 29.5826°)
-- **M** = -0.050000
-- **X** = 55.013536
+Estimate the unknown parameters **θ**, **M**, and **X** in the given parametric equations so that the resulting curve best fits the provided `(x, y)` dataset.  
+The curve equations:
 
-## Final Parametric Equations
+\[
+x(t) = t\cos\theta - e^{M|t|}\sin(0.3t)\sin\theta + X
+\]
 
-```
-x(t) = t*cos(0.516313) - e^(-0.05*|t|) * sin(0.3*t) * sin(0.516313) + 55.013536
-y(t) = 42 + t*sin(0.516313) + e^(-0.05*|t|) * sin(0.3*t) * cos(0.516313)
-```
-
-These equations can be used directly in Desmos for verification.
+\[
+y(t) = 42 + t\sin\theta + e^{M|t|}\sin(0.3t)\cos\theta
+\]
 
 ---
 
-## Approach Summary
-1. Loaded the given `xy_data.csv`.
-2. Assumed `t` ranges from 6 to 60 (uniform spacing).
-3. Defined the parametric model.
-4. Applied **Differential Evolution** for global optimization.
-5. Refined results using **Least Squares**.
-6. Extracted final parameters and plotted fitted curve.
+## ✅ Final Estimated Parameters (Unknown Variables)
+
+- **θ (theta)** = **0.516313 rad** (≈ 29.5826°)
+- **M** = **−0.050000**
+- **X** = **55.013536**
 
 ---
 
-## How to Run
+## 🎯 Final Required Submission (LaTeX Parametric Form)
 
-Install dependencies:
 ```
-pip install numpy pandas scipy matplotlib
+\left(t*\cos(0.516313)-e^{-0.05\left|t\right|}\cdot\sin(0.3t)\sin(0.516313)+55.013536,42+t*\sin(0.516313)+e^{-0.05\left|t\right|}\cdot\sin(0.3t)\cos(0.516313)\right)
 ```
-
-Run the fitting script:
-```
-python main.py
-```
-
-Outputs will include:
-- Final parameter values  
-- Curve plot (`fit_plot.png`)  
-- Results text file (`fit_results.txt`)  
 
 ---
 
-## Files Included
+## 🧠 Methodology & Thought Process
+
+### 1. Understanding the Problem
+We must fit a nonlinear parametric curve to spatial data.
+
+### 2. Preparing the Data
+- Loaded `xy_data.csv`
+- Sampled `t` uniformly from **6 to 60**
+
+### 3. Model Implementation
+Implemented the given parametric equations in Python.
+
+### 4. Optimization Strategy
+
+#### Global search (Differential Evolution)
+- Robust for non-convex problems  
+- L1 loss minimized  
+
+#### Local refinement (Least Squares)
+- Further improved solution accuracy
+
+### 5. Final Result
+The parameters listed above represent the best fit.
+
+---
+
+## 📁 Repository Contents
+
+- `README.md`
 - `main.py`
 - `xy_data.csv`
 - `fit_results.txt`
 - `fit_plot.png`
-- `README.md`
 
+---
+
+## ▶️ How to Run
+
+```
+pip install numpy pandas scipy matplotlib
+python main.py
+```
+
+---
+
+## 🏁 Final Answer
+
+```
+\left(t*\cos(0.516313)-e^{-0.05\left|t\right|}\cdot\sin(0.3t)\sin(0.516313)+55.013536,42+t*\sin(0.516313)+e^{-0.05\left|t\right|}\cdot\sin(0.3t)\cos(0.516313)\right)
+```
