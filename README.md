@@ -6,13 +6,11 @@ Estimate the unknown parameters **θ**, **M**, and **X** in the given parametric
 The curve equations:
 
 $$
-\[
 x(t) = t\cos\theta - e^{M|t|}\sin(0.3t)\sin\theta + X
-\]
+$$
 
-\[
+$$
 y(t) = 42 + t\sin\theta + e^{M|t|}\sin(0.3t)\cos\theta
-\]
 $$
 
 ---
