@@ -5,6 +5,7 @@
 Estimate the unknown parameters **θ**, **M**, and **X** in the given parametric equations so that the resulting curve best fits the provided `(x, y)` dataset.  
 The curve equations:
 
+$$
 \[
 x(t) = t\cos\theta - e^{M|t|}\sin(0.3t)\sin\theta + X
 \]
@@ -12,6 +13,7 @@ x(t) = t\cos\theta - e^{M|t|}\sin(0.3t)\sin\theta + X
 \[
 y(t) = 42 + t\sin\theta + e^{M|t|}\sin(0.3t)\cos\theta
 \]
+$$
 
 ---
 
