@@ -76,6 +76,14 @@ python main.py
 
 ---
 
+## Screen Shots
+### Matplotlib
+![Fitted Plot(matplotlib)](fit_plot.png)
+
+### Desmos
+![desmos](desmos.png)
+
+---
 ## 🏁 Final Answer
 
 $$
