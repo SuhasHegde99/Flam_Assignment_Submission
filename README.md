@@ -25,7 +25,9 @@ y(t) = 42 + t\sin\theta + e^{M|t|}\sin(0.3t)\cos\theta
 
 ## 🎯 Final Required Submission (LaTeX Parametric Form)
 
+$$
 \left(t*\cos(0.516313)-e^{-0.05\left|t\right|}\cdot\sin(0.3t)\sin(0.516313)+55.013536,42+t*\sin(0.516313)+e^{-0.05\left|t\right|}\cdot\sin(0.3t)\cos(0.516313)\right)
+$$
 
 ---
 
@@ -76,4 +78,6 @@ python main.py
 
 ## 🏁 Final Answer
 
+$$
 \left(t*\cos(0.516313)-e^{-0.05\left|t\right|}\cdot\sin(0.3t)\sin(0.516313)+55.013536,42+t*\sin(0.516313)+e^{-0.05\left|t\right|}\cdot\sin(0.3t)\cos(0.516313)\right)
+$$
